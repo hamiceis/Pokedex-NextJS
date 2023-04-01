@@ -1,0 +1,37 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1.2em;
+  margin-bottom: 2em;
+  background-color: #333;
+  color: #FFFFFF;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5em;
+}
+
+.link_itens {
+  display: flex;
+  list-style: none;
+  gap: 1.3em;
+}
+
+.link_itens a {
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 5px;
+  transition: all .4s;
+  border-bottom: 2px solid transparent;
+}
+
+.link_itens a:hover {
+  border-color: #FFFFFF;
+}
+
+

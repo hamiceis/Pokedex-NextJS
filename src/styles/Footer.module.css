@@ -1,0 +1,17 @@
+
+.footer_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  margin-top: 2em;
+  border-top: 3px solid #111;
+  background-color: #333;
+  color: #FFF;
+  
+}
+
+.footer_container span {
+  font-weight: 700;
+  color: darkgoldenrod;
+}

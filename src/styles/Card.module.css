@@ -1,0 +1,56 @@
+.card {
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 1em;
+  margin-bottom: 2em;
+  width: 23%;
+  border-radius: 1em;
+  border: 2px solid #e33d33;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
+  background-color: #333;
+  color: #fff;
+  gap: .3em;
+}
+
+.card .id {
+  display: grid;
+  place-items: center;
+  grid-template-columns: auto;
+  margin: 1em 0;
+  background-color: #e33d33;
+  border-radius: 5px;
+  padding: 5px;
+  color: #fff;
+}
+
+.card .id span {
+  margin: 0 5px;
+}
+
+.card .title {
+  text-transform: capitalize;
+  margin-bottom: 1em;
+  font-size: 1.4em;
+}
+
+/* Centralizar todos os elementos filhos horizontalmente */
+.card > * {
+  justify-self: center;
+}
+
+.card .btn {
+  text-decoration: none;
+  background: #FFF;
+  color: #222;
+  padding: .7em 1.2em;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all .4s;
+}
+
+.btn:hover {
+  background: #e33d33;
+  color: #FFF;
+}
