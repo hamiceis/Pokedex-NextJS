@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
+import { useRouter } from 'next/router'
 import Image from "next/image";
 import { pokemonUrl } from "@/components/Card";
 import styles from "@/styles/Pokemon.module.css";
@@ -20,6 +21,15 @@ interface Params extends ParsedUrlQuery {
   pokemonId: string;
 }
 export default function Pokemon({ pokemon }: PokemonProps) {
+
+  const router = useRouter()
+
+  if(router.isFallback){
+    return (
+      <div>Carregando...</div>
+    )
+  }
+
   return (
     <div className={styles.pokemon_container}>
       <h1 className={styles.title}>{pokemon.name}</h1>
@@ -76,7 +86,7 @@ export const getStaticPaths: GetStaticPaths = () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
